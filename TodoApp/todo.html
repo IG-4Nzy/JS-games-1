@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoApp</title>
+    <link rel="stylesheet" href="todo.css">
+    <script src="todo.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div class="modal hidden">
+        <div class="modal-container">
+            <div onclick="closeModal()" class="two-col-modal">
+               <button class="closeBtn"><p class="cross-mark">❌</p></button>
+            </div>
+            <div class="form-parent">
+                <h1>ADD TASK</h1>
+                <form method="post" class="modal-input-fields" onsubmit="return getFormValues(event)">
+                    <div>
+                        <label for="task">Task</label>
+                        <input class="text-field | modal-text-field" type="text" id="task" placeholder="Task">
+                    </div>
+                    <div>
+                        <label for="description">Description</label>
+                        <input class="text-field | modal-text-field" type="text" id="description" placeholder="Description">
+                    </div>
+                    <div>
+                        <label for="date">Date</label>
+                        <input class="text-field | modal-text-field" type="date" id="date" placeholder="Date">
+                    </div>
+                    <input class="submit-btn | btn" type="submit" value="ADD TASK">
+                </form>
+            </div>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <div>
+                <p class="logo"><span class="to-part">To</span>-Do</p>
+            </div>
+            <div>
+                <form>
+                    <div class="search-box">
+                        <input id="searchBox" class="text-field" type="text" placeholder="search">
+                        <button class="search-btn" onclick="searchTasks(event)" ><svg class="mag-icon" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                            </svg></button>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="todo-container">
+            <div class="two-col">
+                <div class="task-categories">
+                    <p>Task Categories</p>
+                </div>
+                <div>
+                    <a class="go-back" href="#">Go Back</a>
+                </div>
+            </div>
+            <div class="add-category-btn-container">
+                <button onclick="openModal()" class="add-category-btn | btn">Add Task</button>
+                <button onclick="markAllTasks()" class="add-category-btn | btn">Mark All</button>
+            </div>
+            <div class="tasks-table-container">
+                <table class="tasks-table">
+                    <tr>
+                        <th class="s1">SL</th>
+                        <th>Task</th>
+                        <th>Description</th>
+                        <th>Deadline</th>
+                        <th>Action</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

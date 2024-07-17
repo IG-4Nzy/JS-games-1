@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.todo-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(207, 207, 207);
+    height: 6rem;
+    place-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.to-part {
+    color: orangered;
+}
+
+.search-box {
+    width: 20rem;
+    display: flex;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 30px;
+}
+
+.mag-icon {
+    width: 1.5rem;
+}
+
+.search-btn {
+    border: none;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.text-field {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent !important;
+    font-size: 1.5rem;
+}
+
+.task-categories p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.two-col {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.go-back {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn {
+    width: 7rem;
+    background-color: orangered;
+    height: 3rem;
+    color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+tr:nth-child(1) {
+    border-bottom: 2px solid black;
+}
+
+.tasks-table-container {
+    border-radius: 30px;
+    border: 2px solid black;
+    min-height: 40rem;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+tr:nth-child(1) {
+    height: 5rem;
+}
+
+tr {
+    height: 9rem;
+}
+
+td {
+    /* width: 1%; */
+    border-right: 2px solid black;
+    padding: 1rem;
+    border-bottom: 2px solid rgba(58, 58, 58, 0.068);
+}
+
+td:last-child {
+    border-right: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.action-btn {
+    width: 30% !important;
+    font-size: 0.8rem;
+}
+
+.buttons {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.editableTaskFields {
+    border: 0;
+    outline: none;
+    font-size: 1.2rem;
+    text-wrap: wrap;
+    background-color: transparent;
+    width: 100%;
+    height: 9rem;
+    text-align: center;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.719);
+    display: flex;
+    place-items: center;
+}
+
+.modal-container {
+    width: 60%;
+    height: 70%;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.cross-mark {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.two-col {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.two-col-modal {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.closeBtn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.modal-text-field {
+    border: 2px solid rgba(121, 121, 121, 0.267);
+    width: 100%;
+    height: 4rem;
+}
+
+.modal-input-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    width: 50%;
+}
+
+.modal-input-fields label {
+    display: flex;
+}
+
+.form-parent {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.complete-btn {
+    width: 7rem;
+    background-color: orangered;
+    height: 3rem;
+    color: white;
+    font-size: 0.7rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.checkbox {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid orangered;
+    outline: none;
+    display: none;
+}
+
+.checkbox-label {
+    width: 5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    height: 2rem;
+    border: 2px solid orangered;
+}
+
+.add-category-btn-container {
+    display: flex;
+    place-items: center;
+    gap: 1rem;
+}
+
+@media (max-width:720px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .text-field {
+        width: 12rem;
+    }
+
+    .search-box {
+        width: 12rem;
+    }
+
+    .search-btn {
+        position: absolute;
+        right: 3rem;
+        background-color: transparent !important;
+    }
+
+    td,
+    tr,
+    th {
+        width: 15rem !important;
+    }
+
+    table {
+        width: 60rem;
+    }
+
+    .modal-container {
+        width: 90%;
+        height: 70%;
+    }
+}

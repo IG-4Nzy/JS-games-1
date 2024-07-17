@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="modal hidden">
+        <div class="modal-content">
+            <p class="modal-text"></p>
+            <button class="new-game-modal btn" onclick="newGame()">NEW GAME</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="result">
+            <p id="points" class="score"><span class="red">YOU </span>: 0 / 5 &nbsp; <span class="blue"> COMPUTER </span> : 0 /
+                5 <br>DRAW : 0</p>
+            <div class="images-div">
+                <div class="images-computer">
+                    <img class="img computer-img" src="">
+                </div>
+                <div class="images-player">
+                    <img class="img player-img" src="">
+                </div>
+
+            </div>
+            <div id="timer" class="timer hidden">
+                <p>CHOOSE 1</p>
+                <p class="count-down" id="count-down">3</p>
+            </div>
+        </div>
+        <div id="buttons" class="buttons">
+            <div>
+                <button class="stone btn " onclick="btnClicked('stone',1)">STONE</button>
+                <button class="paper btn " onclick="btnClicked('paper',2)">PAPER</button>
+                <button class="scissor btn " onclick="btnClicked('scissors',3)">SCISSOR</button>
+            </div>
+            <button class="new-game btn" onclick="newGame()">NEW GAME</button>
+        </div>
+
+    </div>
+</body>
+
+</html>

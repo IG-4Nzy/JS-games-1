@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeAndLadder</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div id="board" class="board">
+        <div class="snake1">
+            <img src="assets/snake1.png">
+        </div>
+        <div class="snake2">
+            <img src="assets/snake1.png">
+        </div>
+        <div class="snake3">
+            <img src="assets/snake2.png">
+        </div>
+        <div class="snake4">
+            <img src="assets/snake3.png">
+        </div>
+        <div class="ladder1 ladder">
+            <img src="assets/ladder09.png">
+        </div>
+        <div class="ladder2 ladder">
+            <img src="assets/ladder09.png">
+        </div>
+        <div class="ladder3 ladder">
+            <img src="assets/ladder09.png">
+        </div>
+        <div class="ladder4 ladder">
+            <img src="assets/ladder09.png">
+        </div>
+    </div>
+    <div class="dice-container">
+        <p id="turn-toggle"></p>
+        <div id="dice" class="dice">
+            <!-- <img src="assets/dice-game.gif"> -->
+        </div>
+        <button id="rollBtn" class="roll-btn" onclick="playGame()">ROLL</button>
+    </div>
+</body>
+
+</html>
